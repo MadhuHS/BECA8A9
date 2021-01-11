@@ -49,6 +49,37 @@ class Contact extends Object
 	}
 	
 	@Override
+	public int hashCode() 
+	{
+		return id;
+	}
+	
+	@Override
+	public boolean equals(Object obj) 
+	{
+		//INT COMP
+	  /*//if storedContact id == givenContact id
+		if( obj.hashCode() == this.hashCode() )
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		*/
+		
+		//STRING COMP
+		Contact c1 = (Contact) obj;
+		
+		String givenEmail  = c1.email;
+		String storedEmail = this.email;
+		
+		boolean returnValue = givenEmail.equals(storedEmail);
+		return returnValue;
+	}
+	
+	@Override
 	public String toString() 
 	{
 		String returnValue = name+" "+mob;
@@ -60,20 +91,36 @@ class Contact extends Object
 class ContactService
 {
 	private static int id = 1;
-	static Contact c1;
+	static Contact storedContact;
 	
 	public static void addContact(String name,long mob,String email)
 	{
-		c1 = new Contact(id, name, mob, email);
-		id++;
-		System.out.println("Contact added");
+		
+		Contact givenContact = new Contact(id, name, mob, email);
+		
+		if(id == 1)
+		{
+			 storedContact = new Contact(id, name, mob, email);
+			 id++;
+			 System.out.println("Contact added");
+		}
+		else if(givenContact.equals(storedContact))
+		{
+		 storedContact = new Contact(id, name, mob, email);
+		 id++;
+		 System.out.println("Contact added");
+		}
+		else
+		{
+		  System.out.println("Contact already exist");
+		}
 	}
 	
 	public static void getContact(String givenName)
 	{
-		if(givenName.equalsIgnoreCase(c1.getName()))
+		if(givenName.equalsIgnoreCase(storedContact.getName()))
 		{
-		 System.out.println(c1.toString());
+		 System.out.println(storedContact.toString());
 		}
 		else
 		{
@@ -83,11 +130,11 @@ class ContactService
 	
 	public static void getFullContact(String givenName)
 	{
-		if(givenName.equalsIgnoreCase(c1.getName()))
+		if(givenName.equalsIgnoreCase(storedContact.getName()))
 		{
-		   System.out.println(c1.getName());
-		   System.out.println(c1.getMob());
-		   System.out.println(c1.getEmail());
+		   System.out.println(storedContact.getName());
+		   System.out.println(storedContact.getMob());
+		   System.out.println(storedContact.getEmail());
 		}
 		else
 		{
@@ -96,14 +143,12 @@ class ContactService
 	}
 }
 
-
 public class Mainclass3 
 {
 	public static void main(String[] args) 
 	{
        ContactService.addContact("Dinga",998976661l,"Dinga@manga.com");
-       ContactService.getContact("Dinga");
-       ContactService.getFullContact("Dinga");
+       ContactService.addContact("Dingi",8983710323l,"Dingi@manga.com");
 	}
 }
 
