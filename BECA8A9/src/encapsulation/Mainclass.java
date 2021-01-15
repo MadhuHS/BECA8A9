@@ -15,7 +15,9 @@ class Account
 		}
 		else
 		{
-		  System.out.println("INVALID AMT FOR TRANSACTION");
+		  String reason = "INVALID AMT FOR TRANSACTION";
+		  IllegalArgumentException ie = new IllegalArgumentException(reason);
+		  throw ie;
 		}
 	}
 	
