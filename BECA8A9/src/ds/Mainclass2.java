@@ -10,15 +10,14 @@ public class Mainclass2
 	{
 		Stream<String> stm = Arrays.stream(teams);//create a stream and return addrs
 	    
-		Consumer<String> ref = 
-		(String str)->
-		{
-			System.out.println(str);
-		};
+//Consumer<String> ref = (String str)-> System.out.println(str);
+		//stm.forEach((String str)-> System.out.println(str));
+		stm.forEach( str -> System.out.println(str));
+	    
+		Arrays.stream(teams)
+		      .forEach(str2 -> System.out.println(str2));
 		
-		stm.forEach(str -> System.out.println(str));
-	    
-	    
+		//.forEach(varName -> stmt);
 	}
 
 	public static void printTeamName(String[] teams, int index) 
