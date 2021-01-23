@@ -1,45 +1,32 @@
 package ds;
 
-public class Mainclass 
+import java.util.Arrays;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
+
+public class Mainclass2 
 {
 	public static void printTeams(String[] teams) 
 	{
-		for (int i = 0; i < teams.length; i++) 
+		Stream<String> stm = Arrays.stream(teams);//create a stream and return addrs
+	    
+		Consumer<String> ref = 
+		(String str)->
 		{
-			if (teams[i] != null)
-				System.out.println(teams[i]);
-		}
+			System.out.println(str);
+		};
+		
+		stm.forEach(str -> System.out.println(str));
+	    
+	    
 	}
 
 	public static void printTeamName(String[] teams, int index) 
 	{
-		if(index < teams.length)
-		{
-		 System.out.println(teams[index]);
-		}
-		else
-		{
-		  System.out.println("N/A");
-		}
+		
 	}
 	public static boolean searchTeam(String[] teams,String team)
 	{
-		for(int i=0; i<teams.length;i++)
-		{
-		  if(teams[i] != null)
-		  {
-		    if(teams[i].equals(team))
-		    {
-			  return true;
-		    }
-		  }
-		 
-		  else
-		  {
-			  break;//stop for-loop
-		  }
-		}
-		
 		return false;
 	}
 
@@ -59,8 +46,6 @@ public class Mainclass
 		teams2[6] = "RR";
 		teams2[7] = "KXI";
 
-		System.out.println(searchTeam(teams1,"RCB"));
-		printTeamName(teams1,20);
-
+		printTeams(teams1);
 	}
 }
