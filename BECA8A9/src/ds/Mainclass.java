@@ -24,9 +24,23 @@ public class Mainclass
 	}
 	public static boolean searchTeam(String[] teams,String team)
 	{
+		for(int i=0; i<teams.length;i++)
+		{
+		  if(teams[i] != null)
+		  {
+		    if(teams[i].equals(team))
+		    {
+			  return true;
+		    }
+		  }
+		  else
+		  {
+			  break;//stop for-loop
+		  }
+		}
 		
+		return false;
 	}
-
 
 	public static void main(String[] args) {
 		String[] teams1 = new String[10];
@@ -44,7 +58,7 @@ public class Mainclass
 		teams2[6] = "RR";
 		teams2[7] = "KXI";
 
-		
+		System.out.println(searchTeam(teams1,"RCB"));
 		printTeamName(teams1,20);
 
 	}
