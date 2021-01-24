@@ -1,0 +1,43 @@
+Capablity
+
+1. Object Array creation
+2. Strem API
+3. Flow control statements
+4. Object class and its methods
+5. Method Overriding
+6. Bean and Service classes
+7. Methods
+
+
+
+This is capability Exam which will test the capability of Students
+knowing and applying skills.
+
+Below Test is to understand how much knowledge the student has 
+on OOPS and Logical ability.
+
+Note : * create 2 versions of the program 
+         1.using only arrays
+         2.using Stream API
+
+       * for every question above create a new method and impl. the logics.
+       * create Bean or POJO according to requirements.
+
+
+1. Create an array of Employees 
+   and perform the following operations
+
+   a) display all the employees whose salary is greater than 5000;
+
+   b) return any employee who is having job as "Salesman".
+
+   c) return the employee with given ID.
+
+   d) delete the employee with given ID. 
+      return new array and display all employees new array.
+
+   e) return the count of how many are "DEVELOPER".
+
+   f) print details of employees with same names.
+
+
