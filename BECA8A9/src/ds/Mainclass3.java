@@ -1,5 +1,7 @@
 package ds;
 
+import java.util.Arrays;
+
 //OBJECT ARRAY
 
 //Entity,Bean
@@ -54,15 +56,49 @@ class Employee
 	public void setSal(double sal) {
 		this.sal = sal;
 	}
+	
+	@Override
+	public String toString() 
+	{
+	  String empDetials = id +" "+name+" "+job+" "+sal;
+	  return empDetials;
+	}
 }
 
+class EmpService
+{
+	public static void displayAllEmps(Employee[] elist)
+	{
+	  //select * from emp;
+	  for (int i = 0; i < elist.length; i++) 
+	  {
+		 System.out.println(elist[i].toString());
+	  }
+	}
+}
+
+class EmpServiceImpStream
+{
+	public static void displayAllEmps(Employee[] elist)
+	{
+	  Arrays.stream(elist)
+	        .forEach(emp -> System.out.println(emp.toString()));
+	}
+}
 public class Mainclass3 
 {
 	public static void main(String[] args) 
-	{
-       Employee e1 = new Employee(1,"Smith","Dev",2341.2);
+	{       
+       Employee[] elist = new Employee[5];
        
-       Employee[] elist = new Employee[10];
+       elist[0] = new Employee(1,"Smith","Dev",2341.2);
+       elist[1] = new Employee(2,"Blake","Sales",1212.1);
+       elist[2] = new Employee(3,"Martin","QA",1000);
+       elist[3] = new Employee(4,"Miller","DEV",2114.1);
+       elist[4] = new Employee(5,"Blake","HR",1311.1);
+       
+       EmpService.displayAllEmps(elist);
+       EmpServiceImpStream.displayAllEmps(elist);
 	}
 }
 
