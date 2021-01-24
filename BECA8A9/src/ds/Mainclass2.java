@@ -1,8 +1,6 @@
 package ds;
 
 import java.util.Arrays;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class Mainclass2 {
@@ -45,6 +43,10 @@ public class Mainclass2 {
 	public static void searchTeam(String[] teams)
 	{
 	  //print only team names with length more than 3 chars	
+		Arrays.stream(teams)
+		      .filter(str -> str!=null)
+		      .filter(str -> str.length() >= 3)
+		      .forEach(str-> System.out.println(str));
 	}
 
 	public static void main(String[] args) {
@@ -64,5 +66,6 @@ public class Mainclass2 {
 		teams2[7] = "KXI";
 
 		System.out.println(searchTeam(teams2,"AAA"));
+		searchTeam(teams2);
 	}
 }
