@@ -24,7 +24,7 @@ Note : * create 2 versions of the program
        * create Bean or POJO according to requirements.
 
 
-1. Create an array of Employees 
+Q1. Create an array of Employees with minimum of 10 objects 
    and perform the following operations
 
    a) display all the employees whose salary is greater than 5000;
@@ -33,11 +33,58 @@ Note : * create 2 versions of the program
 
    c) return the employee with given ID.
 
-   d) delete the employee with given ID. 
-      return new array and display all employees new array.
+   d) delete the employee with given ID. return new array and display all employees.
 
    e) return the count of how many are "DEVELOPER".
 
    f) print details of employees with same names.
+
+
+Q2.
+   a) display all the Products sorted by desc order of price;
+
+   b) return any product with seller name as "galaxy".
+
+   c) return the product with given ID.
+
+   d) update the product with given ID. 
+      return new array and display all product new array.
+
+   e) return the count of how many are "electronics".
+
+   f) print details of product with same expiry date.
+
+   g) display all the Food Products
+
+
+
+Q3.
+   a) display all the Rooms sorted by desc order of price;
+
+   b) return any Room with type as "Deluxe".
+
+   c) return the Room with given RoomNo.
+
+   d) update the Room with given RoomNo. 
+      return new array and display all RoomNo new array.
+
+   e) return the count of "occupied" status.
+
+
+
+Q4.  
+   a) display all the Flights having Destination as "GOA"
+
+   b) return the Flight with given FlightNo
+
+   c) display the counts of Flights having status as 
+      "CANCELD","ON-TIME" OR "ON-AIR".
+
+   d) update the Flight with given FlightNo. 
+
+   e) display all Flights with occupied seats more than 50.
+
+   f) display count of "ECONOMIC" and "BUISNESS" seats in given
+      flightNO
 
 
