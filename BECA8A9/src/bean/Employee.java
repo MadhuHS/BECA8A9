@@ -1,13 +1,6 @@
-package collections;
+package bean;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-
-//OBJECT ARRAY
-
-//Entity,Bean
-class Employee
+public class Employee
 {
 	private int id;
 	private String name;
@@ -66,29 +59,3 @@ class Employee
 	  return empDetials;
 	}
 }
-
-
-
-public class Mainclass3 
-{
-	public static void main(String[] args) 
-	{    
-	  /* HashMap
-	   * EmpService.createData();
-	   
-       
-      */
-		
-		
-      
-       
-	}
-}
-
-
-
-
-
-
-
-
