@@ -1,5 +1,6 @@
 package collections;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -69,6 +70,7 @@ class Employee
 class EmpService
 {
 	static HashMap<Integer, Employee> eMap;
+	static  ArrayList<Employee> elist;
 	
 	public static void createData()
 	{
@@ -92,6 +94,23 @@ class EmpService
 	       System.out.println(eMap.size());
 	}
 	
+	public static void createArrayListData()
+	{
+		   elist = new ArrayList<Employee>();
+		   
+	       Employee e1 = new Employee(1,"Smith","Dev",2341.2);
+	       Employee e2 = new Employee(2,"Blake","Sales",1212.1);
+	       Employee e3 = new Employee(3,"Martin","QA",1000);
+	       Employee e4 = new Employee(4,"Miller","DEV",2114.1);
+	       Employee e5 = new Employee(5,"Blake","HR",1311.1);
+	       
+	       elist.add(e1);
+	       elist.add(e2);
+	       elist.add(e3);
+	       elist.add(e4);
+	       elist.add(e5);
+	}
+	
 	public static Employee getEmpById(int id)
 	{
 		  Employee e1 = eMap.get(id);
@@ -104,21 +123,38 @@ class EmpService
 		  e1.setSal(newSal);
 		  
 	}
+	
+	public static void getEmployees()
+	{	 
+		 for(int index=0; index<elist.size();index++)
+		 {
+	       System.out.println(elist.get(index).toString());
+		 }
+	}
+	
+	
 }
 
 public class Mainclass3 
 {
 	public static void main(String[] args) 
 	{    
-	   EmpService.createData();
+	  /* HashMap
+	   * EmpService.createData();
 	   
        Employee emp =  EmpService.getEmpById(2);
        System.out.println(emp.toString());
        
        EmpService.updateSal(2,2000);
-       
+      
        emp =  EmpService.getEmpById(2);
        System.out.println(emp.toString());
+      */
+		
+		
+       EmpService.createArrayListData();
+       EmpService.getEmployees();
+       
 	}
 }
 
