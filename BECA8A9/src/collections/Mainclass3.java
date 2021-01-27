@@ -126,10 +126,12 @@ class EmpService
 	
 	public static void getEmployees()
 	{	 
-		 for(int index=0; index<elist.size();index++)
+		 for(int index=0; index<=elist.size()-1;index++)
 		 {
 	       System.out.println(elist.get(index).toString());
 		 }
+		 
+		 
 	}
 	
 	
