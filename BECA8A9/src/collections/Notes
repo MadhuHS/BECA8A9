@@ -147,7 +147,13 @@ Wrapper Classes
    Constructs a list containing the elements 
    of the specified collection.
    
- 
+   * Once the ArrayList is full a new ArrayList will be created
+     by calculating new capacity with below formula
+     
+     New_Cap = Old_Cap*3/2 + 1
+     
+   * Once the new ArrayList is created all the values will be copied
+     from old ArrayList to new ArrayList
    
    Methods of ArrayList
    
@@ -213,7 +219,7 @@ Wrapper Classes
    
    * HashSet do not store duplicates.
    * HashSet don not have index.
-   * HashSet support to store ONLY ONE null values.
+   * HashSet support to store ONLY ONE null value.
    * HashSet do not preserve insertion order.
    
    * Underlying Data Structure of HashSet is Hash Table.
