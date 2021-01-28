@@ -53,9 +53,23 @@ public class Employee
 	}
 	
 	@Override
+	public int hashCode() 
+	{
+	   return id;	
+	}
+	
+	@Override
+	public boolean equals(Object obj) 
+	{
+	  return this.hashCode() == obj.hashCode();	
+	}
+	
+	@Override
 	public String toString() 
 	{
 	  String empDetials = id +" "+name+" "+job+" "+sal;
 	  return empDetials;
 	}
 }
+
+
