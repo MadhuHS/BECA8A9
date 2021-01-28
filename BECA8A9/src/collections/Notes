@@ -151,7 +151,7 @@ Wrapper Classes
    
    Methods of ArrayList
    
-   *
+   *add(index, element) : 
    *
    ..
    

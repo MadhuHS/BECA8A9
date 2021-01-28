@@ -79,6 +79,9 @@ public class Mainclass3
        
       */
 		
+		ArrayList a1 = new ArrayList();
+		a1.add(10);
+		a1.add(20);
 		
       
        

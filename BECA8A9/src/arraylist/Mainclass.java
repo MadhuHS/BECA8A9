@@ -24,8 +24,10 @@ public class Mainclass {
 		elist.add(e5);
 	}
 
-	public static void getEmployees() {
-		for (int index = 0; index <= elist.size() - 1; index++) {
+	public static void getEmployees() 
+	{
+		for (int index = 0; index <= elist.size() - 1; index++) 
+		{
 			System.out.println(elist.get(index).toString());
 		}
 
