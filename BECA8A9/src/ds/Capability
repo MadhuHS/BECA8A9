@@ -24,7 +24,7 @@ Note : * create 2 versions of the program
        * create Bean or POJO according to requirements.
 
 
-1. Create an array of Employees 
+Q1. Create an array of Employees with minimum of 10 objects 
    and perform the following operations
 
    a) display all the employees whose salary is greater than 5000;
@@ -33,15 +33,8 @@ Note : * create 2 versions of the program
 
    c) return the employee with given ID.
 
-   d) delete the employee with given ID. 
-      return new array and display all employees new array.
+   d) delete the employee with given ID. return new array and display all employees.
 
    e) return the count of how many are "DEVELOPER".
 
    f) print details of employees with same names.
-   
-   
-   
-   
-   
-   
