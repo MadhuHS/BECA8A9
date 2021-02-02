@@ -1,6 +1,6 @@
 package bean;
 
-public class Employee
+public class Employee implements Comparable<Employee>
 {
 	private int id;
 	private String name;
@@ -69,6 +69,23 @@ public class Employee
 	{
 	  String empDetials = id +" "+name+" "+job+" "+sal;
 	  return empDetials;
+	}
+
+	@Override
+	public int compareTo(Employee emp) 
+	{
+		if(this.hashCode() > emp.hashCode())
+		{
+			return 1;
+		}
+		else if(this.hashCode() < emp.hashCode())
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 }
 
