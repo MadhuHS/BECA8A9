@@ -1,7 +1,7 @@
-package treeset;
+package priorityqueue;
 
 import java.util.Comparator;
-import java.util.TreeSet;
+import java.util.PriorityQueue;
 
 import bean.Employee;
 
@@ -20,7 +20,7 @@ class EmpIDSort implements Comparator<Employee>
 
 public class Mainclass2 
 {
-	static TreeSet<Employee> elist;
+	static PriorityQueue<Employee> elist;
 	public static void createTreeSetData(String order) 
 	{
 		/*creates the TreeSet and sort the Employee object according ID
@@ -28,7 +28,7 @@ public class Mainclass2
 		*/
 		if(order.equalsIgnoreCase("asc"))
 		{
-          elist = new TreeSet<Employee>();//treeset depends on CompareTo() of Comparable
+          elist = new PriorityQueue<Employee>();//treeset depends on CompareTo() of Comparable
 		}
 		
 		/*creates the TreeSet and sort the Employee object according ID
@@ -44,7 +44,7 @@ public class Mainclass2
 	               };
 	    	
 	               EmpIDSort es1 = new EmpIDSort();
-		  elist = new TreeSet<Employee>(es1);//treeset depends on Compare() of Comparator	
+		  elist = new PriorityQueue<Employee>(es1);//treeset depends on Compare() of Comparator	
 		}
         
         
@@ -71,8 +71,10 @@ public class Mainclass2
 	
 	public static void getEmployees()
 	{
-		elist.stream()
-		     .forEach(emp -> System.out.println(emp));
+		while(elist.isEmpty() == false)
+		{
+			System.out.println(elist.poll());
+		}
 	}
 	
 	public static void main(String[] args) 
