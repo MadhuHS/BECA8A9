@@ -53,12 +53,18 @@ Threads and MultiThreading
  
  Executor Framework
  
-  Executor Framework helps in creating and managing Thread groups/pools.
+  Executor Framework helps in creating and managing 
+  Thread groups/pools.
  
   * We can reuse same thread to perform new task.
+  
   * Threads will execute asynchronous.
-  * We can control the start and stop of thread execution explicitly.
-  * For every type of requirement different pre-defined pools are avilable.
+  
+  * We can control the start and stop of 
+    thread execution explicitly.
+    
+  * For every type of requirement 
+    different pre-defined pools are avilable.
   
   * Executor framework will seperate Task and thread creation.
   
@@ -67,7 +73,8 @@ Threads and MultiThreading
     3. Submit the task
     
     
-    * There are 4 different types of pools that can be created using
+    * There are 4 different types of pools that
+      can be created using
       Executor framework
       
       1. Fixed Thread Pool
@@ -80,7 +87,8 @@ Threads and MultiThreading
   * Creates a thread pool that reuses a fixed number of threads 
     operating off a shared unbounded queue. 
   
-  * At any point, at most nThreads threads will be active processing tasks.
+  * At any point, at most nThreads threads will 
+    be active processing tasks.
   
   * If additional tasks are submitted when all threads are active,
     they will wait in the queue until a thread is available.
@@ -89,7 +97,8 @@ Threads and MultiThreading
     prior to shutdown,a new one will take its place if needed to 
     execute remaining tasks.
  
-  * The threads in the pool will exist until it is explicitly shutdown.
+  * The threads in the pool will exist until 
+    it is explicitly shutdown.
     
     
     Cached Thread Pool
@@ -98,19 +107,21 @@ Threads and MultiThreading
      but will reuse previously constructed threads when they 
      are available. 
    
-   * These pools will typically improve the performance of programs
+   * These pools will typically improve the performance 
+     of programs
      that execute many short-lived asynchronous tasks.
     
-   * Calls to execute will reuse previously constructed threads if available. 
+   * Calls to execute will reuse previously constructed 
+     threads if available. 
     
-   * If no existing thread is available, a new thread will be created and added
-     to the pool. 
+   * If no existing thread is available, a new thread 
+    will be created and added to the pool. 
      
    * Threads that have not been used for sixty seconds are 
      terminated and removed from the pool. 
     
-     Thus, a pool that remains idle for long enough will not consume any 
-     resources.
+     Thus, a pool that remains idle for long enough 
+     will not consume any resources.
     
     
    Scheduled Thread pool
