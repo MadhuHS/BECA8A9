@@ -230,8 +230,10 @@ Threads and MultiThreading
  
  
      Thread DeadLock
-     - It is a situation where 2 threads are waiting to lock the objects
-       of each other to complete the execution and wait for infinite period
+     - It is a situation where 2 threads are waiting to 
+       lock the objects
+       of each other to complete the execution and 
+       wait for infinite period
        of time.
        
      * Thread DeadLock can be overcome by using Inter Thread Communication(ITC)  
