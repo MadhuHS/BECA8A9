@@ -199,11 +199,12 @@ Threads and MultiThreading
      - using Synchronized blocks
      
      * Synchronized methods
-       - any method which is declared by using Synchronized keyword is called
-         as Synchronized method.
+       - any method which is declared by using Synchronized keyword 
+         is called as Synchronized method.
        
-       - If a thread calls the Synchronized method of the class then the thread
-         will acquire the lock on the given object and other threads will not be 
+       - If a thread calls the Synchronized method of the class 
+         then the thread will acquire the lock on the given object 
+         and other threads will not be 
          able to access the same object at the same time.
          
          Hence race condition is avoided.  
